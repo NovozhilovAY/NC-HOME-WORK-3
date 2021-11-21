@@ -1,7 +1,6 @@
 package com.company.list;
 
 import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -113,6 +112,17 @@ public class MyLinkedList<E> implements ILinkedList<E>{
     @Override
     public int size() {
         return size;
+    }
+
+    @Override
+    public String toString() {
+        if(size == 0) return "[]";
+        StringBuilder stringBuilder = new StringBuilder("[");
+        for (E element : this) {
+            stringBuilder.append(element.toString() + ", ");
+        }
+        String result = stringBuilder.substring(0, stringBuilder.length() - 2);
+        return result + "]";
     }
 
     @Override
