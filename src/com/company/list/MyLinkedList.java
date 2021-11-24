@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class MyLinkedList<E> implements ILinkedList<E>{
+public class MyLinkedList<E> implements ILinkedList<E> {
     private Node<E> first = null;
     private Node<E> last = null;
     private int size = 0;
@@ -119,7 +119,8 @@ public class MyLinkedList<E> implements ILinkedList<E>{
         if(size == 0) return "[]";
         StringBuilder stringBuilder = new StringBuilder("[");
         for (E element : this) {
-            stringBuilder.append(element.toString() + ", ");
+            stringBuilder.append(element.toString());
+            stringBuilder.append(", ");
         }
         String result = stringBuilder.substring(0, stringBuilder.length() - 2);
         return result + "]";
@@ -208,7 +209,7 @@ public class MyLinkedList<E> implements ILinkedList<E>{
     @Override
     public Iterator<E> iterator() {
         return new Iterator<E>() {
-            Node<E> current = new Node<>(null, null, first);
+            private Node<E> current = new Node<>(null, null, first);
             @Override
             public boolean hasNext() {
                 return current.next != null;

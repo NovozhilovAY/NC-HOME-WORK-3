@@ -61,9 +61,8 @@ public class Main {
         System.out.println(points.set(1, new MyPoint(6, 6)));
         System.out.println(points);
         System.out.println(points.size());
-        System.out.println(Arrays.toString(points.toArray(new MyPoint[4])));
-
-
+        System.out.println(Arrays.toString(points.toArray(new MyPoint[0])));
+        points.forEach(System.out::println);
     }
 
 }
