@@ -33,9 +33,19 @@ LinkedList показал значительно лучшую производи
 
 Можно сказать, что LinkedList имеет смысл использовать, если преобладающей операцией будет - добавление в начало. Во всех остальных случаях предпочтительнее использовать ArrayList.
 
+### b) Сравнение производительности HashSet, LinkedHashSet, TreeSet для основных операций
+![](https://github.com/NovozhilovAY/Pictures-and-Gifs-for-readme/blob/main/graphics/set/добавление.png)
+![](https://github.com/NovozhilovAY/Pictures-and-Gifs-for-readme/blob/main/graphics/set/поиск%20по%20значению.png)
+![](https://github.com/NovozhilovAY/Pictures-and-Gifs-for-readme/blob/main/graphics/set/удаление%20по%20значению.png)
+#### Вывод
+Для всех операций HashSet и LinkedHashSet показали лучшую производительность, чем TreeSet. Итак, если нам не нужно хранить данные упорядоченно, то используем HashSet или LinkedHashSet.
 
+### c) Сравнение производительности HashMap, LinkedHashMap, TreeMap для основных операций
+![](https://github.com/NovozhilovAY/Pictures-and-Gifs-for-readme/blob/main/graphics/map/добавление.png)
+![](https://github.com/NovozhilovAY/Pictures-and-Gifs-for-readme/blob/main/graphics/map/поиск%20по%20ключу.png)
+![](https://github.com/NovozhilovAY/Pictures-and-Gifs-for-readme/blob/main/graphics/map/удаление%20по%20ключу.png)
 
-
+Для всех операций HashMap и LinkedHashMap показали лучшую производительность, чем TreeMap. Итак, TreeMap имеет смылс использовать в случае, когда есть необходимость хранить данные упорядоченно, иначе используем HashMap или LinkedHashMap
 
 
 
